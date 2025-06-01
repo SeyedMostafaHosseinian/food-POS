@@ -1,1 +1,6 @@
+@import url("assets/fonts/barlow/style.css");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", sans-serif;
+}
