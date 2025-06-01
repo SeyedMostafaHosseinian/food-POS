@@ -3,4 +3,59 @@
 
 @theme {
   --font-sans: "Barlow", sans-serif;
+
+  /* -------------- font sizes --------------- */
+
+  /* Headings */
+  --text-h1: 1.75rem; /* 28px */
+  --text-h1--line-height: 140%;
+  --text-h1--font-weight: 600;
+
+  --text-h2: 1.25rem; /* 20px */
+  --text-h2--line-height: 140%;
+  --text-h2--font-weight: 600;
+
+  /* Body Large */
+  --text-body-large-semibold: 1rem; /* 16px */
+  --text-body-large-semibold--line-height: 140%;
+  --text-body-large-semibold--font-weight: 600;
+
+  --text-body-large-medium: 1rem;
+  --text-body-large-medium--line-height: 140%;
+  --text-body-large-medium--font-weight: 500;
+
+  --text-body-large-regular: 1rem;
+  --text-body-large-regular--line-height: 140%;
+  --text-body-large-regular--font-weight: 400;
+
+  /* Body Normal */
+  --text-body-normal-semibold: 0.875rem; /* 14px */
+  --text-body-normal-semibold--line-height: 140%;
+  --text-body-normal-semibold--font-weight: 600;
+
+  --text-body-normal-medium: 0.875rem;
+  --text-body-normal-medium--line-height: 130%;
+  --text-body-normal-medium--font-weight: 500;
+
+  --text-body-normal-regular: 0.875rem;
+  --text-body-normal-regular--line-height: 140%;
+  --text-body-normal-regular--font-weight: 400;
+
+  /* Body Small */
+  --text-body-small-medium: 0.75rem; /* 12px */
+  --text-body-small-medium--line-height: 140%;
+  --text-body-small-medium--font-weight: 500;
+
+  --text-body-small-regular: 0.75rem;
+  --text-body-small-regular--line-height: 140%;
+  --text-body-small-regular--font-weight: 400;
+
+  /* Buttons */
+  --text-button-normal-semibold: 0.875rem; /* 14px */
+  --text-button-normal-semibold--line-height: 140%;
+  --text-button-normal-semibold--font-weight: 600;
+
+  --text-button-small-semibold: 0.75rem; /* 12px */
+  --text-button-small-semibold--line-height: 140%;
+  --text-button-small-semibold--font-weight: 600;
 }
