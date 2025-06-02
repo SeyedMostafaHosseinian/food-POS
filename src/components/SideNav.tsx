@@ -39,7 +39,7 @@ export default function SideNav() {
   const location = useLocation();
   const currentPage = location.pathname;
   return (
-    <nav className="fixed top-0 bottom-0 start-0 bg-dark-bg-2 py-6 flex flex-col justify-between">
+    <nav className="fixed top-0 bottom-0 start-0 bg-dark-bg-2 py-6 flex flex-col justify-between rounded-tr-xl rounded-br-xl">
       <div>
         <div className="w-full px-6">
           <div className="w-14 h-14">
@@ -59,7 +59,7 @@ export default function SideNav() {
                 {isActive && <EdgeRectangles />}
                 <Link
                   className={`w-14 h-14 flex items-center justify-center rounded-xl ${
-                    isActive ? "bg-primary" : ""
+                    isActive ? "bg-primary shadow-custom-1" : ""
                   }`}
                   to={mc.link}
                 >
