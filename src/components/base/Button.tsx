@@ -16,7 +16,7 @@ export default function Button({
 }: ButtonProps) {
   const variantClassNames: Record<Variant, string> = {
     outline: "border border-primary text-primary",
-    fill: "bg-primary text-white",
+    fill: "bg-primary text-white shadow-custom-1",
   };
 
   return (
@@ -24,7 +24,7 @@ export default function Button({
       {...props}
       data-variant={variant}
       data-just-icon={justIcon}
-      className={`rounded-lg flex max-h-12 items-center justify-center 
+      className={`rounded-lg flex max-h-12 items-center justify-center disabled:shadow-none disabled:opacity-45 disabled:cursor-not-allowed
         text-button-normal-semibold py-3.5 cursor-pointer hover:opacity-80 active:opacity-50
         transition-opacity 
         ${variantClassNames[variant]} ${className} ${
