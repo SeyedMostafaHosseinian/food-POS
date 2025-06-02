@@ -1,8 +1,11 @@
 import "./App.css";
+import Icon from "./components/Icon";
+import IconRegistry from "./components/IconRegistry";
 
 function App() {
   return (
-    <>
+    <main>
+      <IconRegistry />
       <div className="p-4 drop-shadow-custom-1">
         <div className="font-bold text-h1 text-primary">Hot Dishes</div>
         <div className="font-bold text-h2 text-secondary">Hot Dishes</div>
@@ -24,11 +27,12 @@ function App() {
         <div className="font-bold text-body-small-regular">Hot Dishes</div>
         <div className="font-bold text-button-normal-semibold">Hot Dishes</div>
         <div className="font-bold text-button-small-semibold">Hot Dishes</div>
-        <button className="flex items-center justify-center bg-primary py-3 px-10 rounded text-white cursor-pointer text-button-normal-semibold">
+        <button className="flex items-center justify-center bg-primary py-2.5 px-10 rounded-lg text-white cursor-pointer text-button-normal-semibold">
           buy pizza
+          <Icon id="setting" className="fill-white w-6 h-6" />
         </button>
       </div>
-    </>
+    </main>
   );
 }
 
