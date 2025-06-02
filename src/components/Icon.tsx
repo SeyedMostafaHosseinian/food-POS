@@ -3,7 +3,7 @@ export default function Icon({
   className,
 }: {
   id: string;
-  className: string;
+  className?: string;
 }) {
   return (
     <svg className={className ? className : "w-6 h-6"}>
