@@ -3,6 +3,7 @@ import Box from "./components/base/Box";
 import Button from "./components/base/Button";
 import Input from "./components/base/Input";
 import Select from "./components/base/Select";
+import StatusBadge from "./components/base/StatusBadge";
 import Icon from "./components/Icon";
 import IconRegistry from "./components/IconRegistry";
 import SideNav from "./components/SideNav";
@@ -119,6 +120,11 @@ function App() {
               { label: "value-2", value: "valsl664fdf" },
             ]}
           />
+        </Box>
+        <Box className="flex gap-x-2 p-4">
+          <StatusBadge label="status badge" status="completed" />
+          <StatusBadge label="status badge" status="pending" />
+          <StatusBadge label="status badge" status="preparing" />
         </Box>
       </div>
     </main>

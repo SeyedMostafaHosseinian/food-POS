@@ -58,7 +58,7 @@ export default function Select({
             checkDirection();
             setOpen(!open);
           }}
-          className="w-full h-full p-3.5 flex items-center gap-x-1"
+          className="w-full h-full p-3.5 flex items-center gap-x-1 cursor-pointer"
         >
           <Icon id="down" />
           <span>{selected?.label || placeholder}</span>
@@ -78,7 +78,7 @@ export default function Select({
           <div className="max-h-52 overflow-auto">
             {options.map((o) => (
               <li
-                className="p-3 hover:bg-dark-form-bg rounded-md transition-all"
+                className="p-3 hover:bg-dark-form-bg rounded-md transition-all cursor-pointer"
                 onClick={() => handleSelect(o)}
                 key={o.value}
               >
