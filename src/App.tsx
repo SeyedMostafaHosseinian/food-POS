@@ -1,6 +1,7 @@
 import "./App.css";
 import Button from "./components/base/Button";
 import Input from "./components/base/Input";
+import Select from "./components/base/Select";
 import Icon from "./components/Icon";
 import IconRegistry from "./components/IconRegistry";
 import SideNav from "./components/SideNav";
@@ -36,6 +37,44 @@ function App() {
         </Button>
         <Input disabled className="w-60" type="text" />
         <Input className="w-60" type="text" iconName="search" />
+        <Select
+          className="w-40"
+          placeholder="select"
+          name="test-select"
+          options={[
+            { label: "value-1", value: "value1" },
+            { label: "value-2", value: "valslfdf" },
+          ]}
+        />
+        <Select
+          className="w-40"
+          placeholder="select"
+          name="test-select"
+          options={[
+            { label: "value-1", value: "value1" },
+            { label: "value-2", value: "valslfdf" },
+          ]}
+        />{" "}
+        <Select
+          className="w-40"
+          placeholder="select"
+          name="test-select"
+          options={[
+            { label: "value-1", value: "value1" },
+            { label: "value-2", value: "valslfdf" },
+          ]}
+        />{" "}
+        <Select
+          className="w-40"
+          placeholder="select"
+          name="test-select"
+          options={[
+            { label: "value-1", value: "value1" },
+            { label: "value-2", value: "valslfdf" },
+            { label: "value-2", value: "valslfdf543" },
+            { label: "value-2", value: "valslfdf" },
+          ]}
+        />
       </div>
     </main>
   );
