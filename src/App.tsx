@@ -1,4 +1,5 @@
 import "./App.css";
+import Box from "./components/base/Box";
 import Button from "./components/base/Button";
 import Input from "./components/base/Input";
 import Select from "./components/base/Select";
@@ -89,6 +90,36 @@ function App() {
             { label: "value-2", value: "valsl664fdf" },
           ]}
         />
+        <Box className="p-4">
+          <Select
+            className="w-40"
+            placeholder="select"
+            name="test-select"
+            options={[
+              { label: "value-1", value: "value1" },
+              { label: "value-2", value: "valslfdf" },
+              { label: "value-2", value: "valslfdf543" },
+              { label: "value-2", value: "valslfdf" },
+              { label: "value-2", value: "valslfd4324f" },
+              { label: "value-2", value: "valsl664fdf" },
+            ]}
+          />
+        </Box>
+        <Box rounded={false} className="p-4 rounded-2xl">
+          <Select
+            className="w-40"
+            placeholder="select"
+            name="test-select"
+            options={[
+              { label: "value-1", value: "value1" },
+              { label: "value-2", value: "valslfdf" },
+              { label: "value-2", value: "valslfdf543" },
+              { label: "value-2", value: "valslfdf" },
+              { label: "value-2", value: "valslfd4324f" },
+              { label: "value-2", value: "valsl664fdf" },
+            ]}
+          />
+        </Box>
       </div>
     </main>
   );
