@@ -49,7 +49,7 @@ export default function Select({
     <div ref={containerRef}>
       <ul
         ref={ref}
-        className={`rounded-lg text-white border border-dark-line h-12 relative text-body-normal-medium ${className} ${
+        className={`rounded-lg text-white border border-dark-line  bg-dark-bg-2 h-12 relative text-body-normal-medium ${className} ${
           !open ? "" : ""
         }`}
       >
@@ -65,7 +65,7 @@ export default function Select({
         </button>
         {/* {open && ( */}
         <div
-          className={`w-full flex flex-col rounded-lg bg-dark-bg-2 transform absolute start-0 p-2 ${
+          className={`w-full flex flex-col rounded-lg bg-dark-bg-2  border border-dark-line  transform absolute start-0 p-2 ${
             openUpward ? "bottom-full mb-1" : "top-[50px]"
           } ${
             open

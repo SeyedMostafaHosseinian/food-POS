@@ -8,7 +8,7 @@ import SideNav from "./components/SideNav";
 
 function App() {
   return (
-    <main className="w-full h-screen dark:bg-dark-bg-1 bg-light-bg-1">
+    <main className="w-full h-full overflow-auto dark:bg-dark-bg-1 bg-light-bg-1">
       <IconRegistry />
       <SideNav />
       <div className="ms-32 p-4 flex flex-col gap-y-2">
@@ -37,6 +37,18 @@ function App() {
         </Button>
         <Input disabled className="w-60" type="text" />
         <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="search" />
+        <Input className="w-60" type="text" iconName="wallet" />
         <Select
           className="w-40"
           placeholder="select"
@@ -73,6 +85,8 @@ function App() {
             { label: "value-2", value: "valslfdf" },
             { label: "value-2", value: "valslfdf543" },
             { label: "value-2", value: "valslfdf" },
+            { label: "value-2", value: "valslfd4324f" },
+            { label: "value-2", value: "valsl664fdf" },
           ]}
         />
       </div>
