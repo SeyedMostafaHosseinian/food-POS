@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Icon from "../Icon";
 import useOutsideClick from "../../hooks/useOutSideClick";
 import useDropdownDirection from "../../hooks/useDropDownDirection";
+import clsx from "clsx";
 
 type Option = {
   label: string;
@@ -65,7 +66,7 @@ export default function Select({
         </button>
         {/* {open && ( */}
         <div
-          className={`w-full flex flex-col rounded-lg bg-dark-bg-2  border border-dark-line  transform absolute start-0 p-2 ${
+          className={`w-full rounded-lg bg-dark-bg-2 border border-dark-line transform absolute start-0 ${
             openUpward ? "bottom-full mb-1" : "top-[50px]"
           } ${
             open
@@ -75,10 +76,13 @@ export default function Select({
                 }`
           }`}
         >
-          <div className="max-h-52 overflow-auto">
+          <div className="max-h-52 p-2 overflow-auto flex flex-col gap-y-1">
             {options.map((o) => (
               <li
-                className="p-3 hover:bg-dark-form-bg rounded-md transition-all cursor-pointer"
+                className={clsx(
+                  "p-3 hover:bg-dark-form-bg rounded-md transition-all cursor-pointer",
+                  selected?.value === o.value && "text-primary bg-primary/10"
+                )}
                 onClick={() => handleSelect(o)}
                 key={o.value}
               >

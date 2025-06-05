@@ -39,7 +39,7 @@ export default function SideNav() {
   const location = useLocation();
   const currentPage = location.pathname;
   return (
-    <nav className="fixed top-0 bottom-0 start-0 bg-dark-bg-2 py-6 flex flex-col justify-between rounded-tr-xl rounded-br-xl">
+    <nav className="h-full shrink-0 bg-dark-bg-2 py-6 flex flex-col justify-between rounded-tr-xl rounded-br-xl">
       <div>
         <div className="w-full px-6">
           <div className="w-14 h-14">

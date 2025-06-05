@@ -1,5 +1,6 @@
 import { useRef, useState, type InputHTMLAttributes } from "react";
 import Icon from "../Icon";
+import clsx from "clsx";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   iconName?: string;
@@ -19,12 +20,12 @@ export default function Input({
       onClick={() => {
         inputRef?.current?.focus();
       }}
-      className={`bg-dark-form-bg rounded-lg border text-body-normal-regular transition-opacity
-      gap-x-2 text-lighter-text h-12 flex items-center justify-start p-3.5
-      ${className ? className : ""}
-      ${disabled ? "opacity-40 cursor-not-allowed" : ""}
-      ${isFocused ? "border-primary" : "border-dark-line"}
-     `}
+      className={clsx(
+        "bg-dark-form-bg rounded-lg border text-body-normal-regular transition-opacity gap-x-2 text-lighter-text h-12 flex items-center justify-start p-3.5",
+        className,
+        disabled ? "opacity-40 cursor-not-allowed" : "cursor-text",
+        isFocused ? "border-primary" : "border-dark-line"
+      )}
     >
       {iconName && (
         <Icon className="text-white w-5 h-5 shrink-0" id={iconName} />
