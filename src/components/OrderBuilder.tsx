@@ -2,7 +2,7 @@ import { useState } from "react";
 import ORDER_TYPE_OPTIONS from "../constants/order-type-options";
 import clsx from "clsx";
 import OrderFoodList from "./OrderFoodList";
-import Button from "./base/Button";
+import CostSummary from "./CostSummary";
 
 export default function OrderBuilder() {
   const [selectedOrderType, setSelectedOrderType] = useState(
@@ -38,29 +38,12 @@ export default function OrderBuilder() {
           Price
         </span>
       </div>
-      {/* line */}
-      <span className="w-full border-b border-dark-line"></span>
       {/* foods list */}
-      <div className="flex-1 overflow-auto border-b border-dark-line">
+      <div className="overflow-auto border-y border-dark-line py-6">
         <OrderFoodList />
       </div>
-      {/* price counter */}
-      <div className="w-full flex flex-col gap-y-4">
-        <div className="w-full flex justify-between items-center">
-          <span className="text-light-text text-body-normal-regular">
-            Discount
-          </span>
-          <span className="text-white text-body-large-medium">$ 0</span>
-        </div>
-        <div className="w-full flex justify-between items-center">
-          <span className="text-light-text text-body-normal-regular">
-            Sub total
-          </span>
-          <span className="text-white text-body-large-medium">$ 55.5</span>
-        </div>
-      </div>
-      {/* button */}
-      <Button className="w-full shadow-custom-1">Continue to Payment</Button>
+      {/* cost summary */}
+      <CostSummary />
     </div>
   );
 }

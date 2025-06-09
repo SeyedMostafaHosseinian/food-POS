@@ -4,6 +4,7 @@ import Select from "../components/base/Select";
 import TabList from "../components/base/TabList";
 import FoodCard from "../components/FoodCard";
 import OrderBuilder from "../components/OrderBuilder";
+import OrderPaymentDrawer from "../components/OrderPaymentDrawer";
 import TodayDate from "../components/TodayDate";
 import { useUpdateSearchParam } from "../hooks/useUpdateSearchParam";
 import { FOODS } from "../mock-data/foods-list";
@@ -63,13 +64,19 @@ export default function Home() {
         {/* row-4 */}
         <div className="grid grid-cols-[repeat(auto-fill,minmax(192px,1.2fr))] gap-y-6 gap-x-7 mt-6 overflow-auto">
           {FOODS.map((f) => (
-            <FoodCard food={f} />
+            <FoodCard food={f} key={f.id} />
           ))}
         </div>
       </div>
       {/* side box */}
-      <Box className="w-[409px] h-screen flex shrink-0 p-6" rounded={false}>
-        <OrderBuilder />
+      <Box
+        className="w-[409px] h-screen flex flex-col justify-between shrink-0 p-6"
+        rounded={false}
+      >
+        <div className="flex overflow-auto">
+          <OrderBuilder />
+        </div>
+        <OrderPaymentDrawer />
       </Box>
     </div>
   );

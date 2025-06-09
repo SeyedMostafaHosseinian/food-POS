@@ -28,7 +28,7 @@ export default function Select({
 }: CustomSelectProps) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<Option | undefined>(
-    options.find((opt) => opt.value === value)
+    options.find((opt) => opt.value === value) || options[0]
   );
   const ref = useOutsideClick(() => setOpen(false));
   const { containerRef, openUpward, checkDirection } = useDropdownDirection(
@@ -47,22 +47,23 @@ export default function Select({
   }, [open]);
 
   return (
-    <div ref={containerRef}>
-      <ul
-        ref={ref}
-        className={`rounded-lg text-white border border-dark-line  bg-dark-bg-2 h-12 relative text-body-normal-medium ${className} ${
-          !open ? "" : ""
-        }`}
-      >
+    <div
+      className={clsx(
+        "rounded-lg text-white border border-dark-line bg-dark-bg-2 h-12 relative text-body-normal-medium",
+        className
+      )}
+      ref={containerRef}
+    >
+      <ul ref={ref}>
         <button
           onClick={() => {
             checkDirection();
             setOpen(!open);
           }}
-          className="w-full h-full p-3.5 flex items-center gap-x-1 cursor-pointer"
+          className="w-full h-full p-3.5 flex items-center gap-x-1 cursor-pointer -mt-0.75"
         >
           <Icon id="down" />
-          <span>{selected?.label || placeholder}</span>
+          <span>{selected?.label || placeholder || options[0].label}</span>
         </button>
         {/* {open && ( */}
         <div
