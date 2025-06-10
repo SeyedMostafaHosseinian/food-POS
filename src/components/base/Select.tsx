@@ -16,6 +16,7 @@ interface CustomSelectProps {
   className?: string;
   onChange?: (value: string) => void;
   placeholder?: string;
+  customIconName?: string;
 }
 
 export default function Select({
@@ -24,6 +25,7 @@ export default function Select({
   onChange,
   name,
   placeholder,
+  customIconName,
   value,
 }: CustomSelectProps) {
   const [open, setOpen] = useState(false);
@@ -62,8 +64,8 @@ export default function Select({
           }}
           className="w-full h-full p-3.5 flex items-center gap-x-1 cursor-pointer -mt-0.75"
         >
-          <Icon id="down" />
-          <span>{selected?.label || placeholder || options[0].label}</span>
+          <Icon id={customIconName || "down"} />
+          <span>{selected?.label || placeholder || options?.[0]?.label}</span>
         </button>
         {/* {open && ( */}
         <div
@@ -78,7 +80,7 @@ export default function Select({
           }`}
         >
           <div className="max-h-52 p-2 overflow-auto flex flex-col gap-y-1">
-            {options.map((o) => (
+            {options?.map((o) => (
               <li
                 className={clsx(
                   "p-3 hover:bg-dark-form-bg rounded-md transition-all cursor-pointer",

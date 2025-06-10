@@ -1,7 +1,6 @@
 import type { HTMLAttributes } from "react";
 import clsx from "clsx";
-
-type Status = "pending" | "preparing" | "completed";
+import type { Status } from "../../types/status.type";
 
 interface StatusBadgeProps extends HTMLAttributes<HTMLSpanElement> {
   status: Status;
@@ -33,13 +32,13 @@ export default function StatusBadge({
   return (
     <span
       className={clsx(
-        "inline-flex text-white items-center px-3 py-0.5 rounded-full text-body-normal-medium",
+        "inline-flex text-white items-center px-3 py-1 rounded-full text-body-normal-medium",
         style.classes,
         className
       )}
       {...props}
     >
-      {label}
+      <span className="-mt-0.5">{label}</span>
     </span>
   );
 }
