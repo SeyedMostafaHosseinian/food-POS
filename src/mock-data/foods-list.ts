@@ -1,4 +1,8 @@
 import type { FoodItem } from "../types/food.interface";
+import NoodleFood from "/src/assets/images/foods/Spicy seasoned seafood noodles.png";
+import SoupFood from "/src/assets/images/foods/beef-dumpling-in-hot-and-sour-soup.png";
+import OmeletteFood from "/src/assets/images/foods/Spicy instant noodle with special omelette.png";
+import SpinachLeafFoodImage from "/src/assets/images/foods/Healthy noodle with spinach leaf.png";
 
 export const FOODS: FoodItem[] = [
   {
@@ -6,7 +10,7 @@ export const FOODS: FoodItem[] = [
     name: "Grilled Chicken Sandwich",
     description: "Grilled chicken with lettuce, tomato, and mayo",
     basePrice: 95000,
-    image: "/src/assets/images/foods/salted-pasta-with-mushroom-sauce.png",
+    image: NoodleFood,
     category: "Main",
     tags: ["grilled", "chicken"],
     calories: 500,
@@ -19,7 +23,7 @@ export const FOODS: FoodItem[] = [
   },
   {
     id: "254366634",
-    image: "/src/assets/images/foods/Spicy seasoned seafood noodles.png",
+    image: NoodleFood,
     name: "Veggie Wrap",
     basePrice: 70.03,
     serveOptions: [
@@ -31,7 +35,7 @@ export const FOODS: FoodItem[] = [
   },
   {
     id: "23442677",
-    image: "/src/assets/images/foods/beef-dumpling-in-hot-and-sour-soup.png",
+    image: SoupFood,
     name: "Veggie Wrap",
     basePrice: 70000,
     serveOptions: [
@@ -43,7 +47,7 @@ export const FOODS: FoodItem[] = [
   },
   {
     id: "5437634",
-    image: "/src/assets/images/foods/beef-dumpling-in-hot-and-sour-soup.png",
+    image: SoupFood,
     name: "Veggie Wrap",
     basePrice: 70000,
     serveOptions: [
@@ -55,8 +59,7 @@ export const FOODS: FoodItem[] = [
   },
   {
     id: "2543664354634",
-    image:
-      "/src/assets/images/foods/Spicy instant noodle with special omelette.png",
+    image: OmeletteFood,
     name: "Veggie Wrap",
     basePrice: 70000,
     serveOptions: [
@@ -68,7 +71,7 @@ export const FOODS: FoodItem[] = [
   },
   {
     id: "2132132",
-    image: "/src/assets/images/foods/Healthy noodle with spinach leaf.png",
+    image: SpinachLeafFoodImage,
     name: "fdsf",
     basePrice: 4324,
     serveOptions: [{ type: "dineIn", isAvailable: true }],
@@ -76,7 +79,7 @@ export const FOODS: FoodItem[] = [
   },
   {
     id: "34234234",
-    image: "/src/assets/images/foods/beef-dumpling-in-hot-and-sour-soup.png",
+    image: SoupFood,
     name: "f2343dsf",
     basePrice: 4324,
     serveOptions: [{ type: "dineIn", isAvailable: true }],
