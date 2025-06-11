@@ -41,7 +41,7 @@ export default function ProductsManagements() {
           </div>
         </button>
         {FOODS.map((f) => (
-          <FoodEditCard food={f} />
+          <FoodEditCard key={f.id} food={f} />
         ))}
       </div>
       {/* row-5 */}
