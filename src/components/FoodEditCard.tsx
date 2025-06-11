@@ -24,7 +24,7 @@ export default function FoodEditCard({ food }: { food: FoodItem }) {
       {/* this is for fill empty space for bottom button is stick to bottom */}
       <span className="flex-1"></span>
       {/* edit button */}
-      <button className="w-full flex items-center justify-center text-primary bg-primary/24 gap-x-2 py-4">
+      <button className="w-full flex items-center justify-center text-primary bg-primary/24 gap-x-2 py-4 cursor-pointer">
         <Icon id="edit" className=" w-4 h-4" />
         <span className="text-button-normal-semibold">Edit dish</span>
       </button>
