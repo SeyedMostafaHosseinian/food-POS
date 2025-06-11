@@ -269,6 +269,34 @@ const orders: Order[] = [
     totalPayment: 9.75,
     discount: 0,
   },
+  {
+    id: "754643r",
+    customer: {
+      id: "user3",
+      avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      fullName: "Levi Ackerman",
+      email: "reza.ahmadi@example.com",
+    },
+    items: [
+      {
+        id: "food3",
+        name: "Caesar Salad",
+        description: "Fresh Caesar salad with chicken and croutons",
+        basePrice: 9.75,
+        category: "Salads",
+        tags: ["salad", "chicken"],
+        calories: 350,
+        serveOptions: [
+          { type: "dineIn", price: 0, isAvailable: true },
+          { type: "curbside", price: 1, isAvailable: false },
+        ],
+        availableCount: 20,
+      },
+    ],
+    status: "pending",
+    totalPayment: 9.75,
+    discount: 0,
+  },
 ];
 
 const data = [
