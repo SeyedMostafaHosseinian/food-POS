@@ -11,7 +11,7 @@ interface MenuConfigItem {
 const menuConfig: MenuConfigItem[] = [
   {
     iconId: "home",
-    link: "",
+    link: "home",
   },
   {
     iconId: "discount",
@@ -37,7 +37,6 @@ const menuConfig: MenuConfigItem[] = [
 
 export default function SideNav() {
   const location = useLocation();
-  const currentPage = location.pathname;
   return (
     <nav className="h-full shrink-0 bg-dark-bg-2 py-6 flex flex-col justify-between rounded-tr-xl rounded-br-xl">
       <div>
@@ -48,7 +47,8 @@ export default function SideNav() {
         </div>
         <ul className="w-full flex flex-col gap-y-5.5 mt-12 ps-3">
           {menuConfig.map((mc) => {
-            const isActive = currentPage == "/" + mc.link;
+            const firstPath = location.pathname.split("/")[1];
+            const isActive = firstPath.includes(mc.link);
             return (
               <li
                 className={` rounded-2xl rounded-tr-none rounded-br-none relative flex w-full p-3 ${
