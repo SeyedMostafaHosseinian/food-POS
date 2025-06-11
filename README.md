@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# 🍽️ Food POS - Point of Sale UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Point of Sale (POS) interface for tablet devices built with **React**, **Vite**, **Tailwind CSS**, and **React Router**. Designed to provide a smooth user experience for restaurants, cafes, and food delivery services.
 
-Currently, two official plugins are available:
+## 📸 Preview
+![Screenshot from 2025-06-11 18-02-07](https://github.com/user-attachments/assets/02693c87-048c-4f18-8611-82a0ac897f6d)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🌙 **Dark theme** inspired by "Food POS Dark - Tablet Device" (Figma design)
+- 🧭 **Multi-page routing** using `react-router-dom`
+- 🛒 Order management interface
+- 🍔 Product listing with categories
+- 📦 Live order list with status indicators
+- 🎨 Modern UI with **Tailwind CSS**
+- 🔄 Component-based architecture
+- 🔋 Optimized performance with **Vite**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React 18**
+- **Vite**
+- **Tailwind CSS**
+- **React Router DOM**
+- **Zustand** (optional: for global state management)
+- **Figma Design** as UI reference
+
+## 📂 Project Structure
+
+src/
+
+├── components/ # Reusable UI components
+
+├── pages/ # Page-level components
+
+├── layouts/ # Layout wrappers
+
+├── assets/ # Static files and images
+
+├── App.tsx
+
+└── main.tsx
+
+
+
+## 🔧 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/food-pos.git
+cd food-POS
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Development
+```bash
+npm run dev
 ```
