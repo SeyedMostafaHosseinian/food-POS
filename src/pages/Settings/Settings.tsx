@@ -24,41 +24,39 @@ const menuConfig: MenuItem[] = [
     path: "your-restaurant",
   },
   {
-    title: "Product Managements",
+    title: "Products Managements",
     description: "Manage your product, pricing, etc",
     iconName: "discount",
-    path: "3f3e",
+    path: "products-management",
   },
   {
     title: "Notifications",
-    description: "",
+    description: "Customize your notifications",
     iconName: "notification",
-    path: "f3f3",
+    path: "notifications-setting",
   },
   {
     title: "Security",
-    description: "",
+    description: "Configure Password, PIN, etc",
     iconName: "security",
     path: "fwfe3",
   },
   {
-    title: "Security",
-    description: "",
+    title: "Security2",
+    description: "Configure Password, PIN, etc",
     iconName: "security",
     path: "efwf",
   },
   {
     title: "About Us",
-    description: "",
+    description: "Find out more about Posly",
     iconName: "about-us",
     path: "wef",
   },
-  { title: "fsdfd", path: "fsdwe" },
 ];
 
 export default function Settings() {
   const location = useLocation();
-  console.log(location);
   return (
     <div className="w-full h-full flex flex-col py-6 pe-6">
       {/* title */}
