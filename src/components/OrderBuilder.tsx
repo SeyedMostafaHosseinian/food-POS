@@ -16,6 +16,7 @@ export default function OrderBuilder() {
       <div className="w-full flex items-center gap-x-2">
         {ORDER_TYPE_OPTIONS.map((t) => (
           <button
+            key={t}
             onClick={() => setSelectedOrderType(t)}
             className={clsx(
               "rounded-lg px-3 py-1.75 cursor-pointer text-body-normal-semibold",
