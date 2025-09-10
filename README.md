@@ -50,14 +50,6 @@ src/
 - Node.js (v18+ recommended)
 - npm or yarn
 
-### Installation
-
-```bash
-git clone https://github.com/your-username/food-pos.git
-cd food-POS
-npm install
-```
-
 ### Development
 ```bash
 npm run dev
